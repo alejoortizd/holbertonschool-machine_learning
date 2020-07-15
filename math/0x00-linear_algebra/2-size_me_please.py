@@ -19,4 +19,3 @@ def matrix_shape(matrix):
         a.append(matrix[i])
     shape_matrix(matrix, a)
     return a
-    
