@@ -15,7 +15,5 @@ def shape_matrix(matrix, a):
 def matrix_shape(matrix):
     """Functio that call another function to calculate the shape"""
     a = []
-    for i in matrix:
-        a.append(matrix[i])
     shape_matrix(matrix, a)
     return a
