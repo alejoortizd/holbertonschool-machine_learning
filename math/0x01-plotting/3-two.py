@@ -17,4 +17,3 @@ plt.xlabel('Time (years)')
 plt.ylabel('Fraction Remaining')
 plt.legend(loc='best')
 plt.show()
-
