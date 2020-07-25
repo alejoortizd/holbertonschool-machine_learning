@@ -40,3 +40,15 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 **[8-all-together](8-all-together)** Put it all together and what do you get?
 
 **[9-sum_total.py](9-sum_total.py)** Our life is the sum total of all the decisions we make every day, and those decisions are determined by our priorities 
+
+**[11-integral](11-integral)** Good grooming is integral and impeccable style is a must mandatory
+
+**[12-integral](12-integral)** We are all an integral part of the web of life
+
+**[13-definite](13-definite)** Create a definite plan for carrying out your desire and begin at once
+
+**[14-definite](14-definite)** My talents fall within definite limitations
+
+**[15-definite](15-definite)** Winners are people with definite purpose in life
+
+**[16-double](16-double)** Double whammy
