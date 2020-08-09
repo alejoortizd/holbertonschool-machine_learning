@@ -11,23 +11,26 @@ class DeepNeuralNetwork:
     def __init__(self, nx, layers):
         """init the class"""
         if type(nx) is not int:
-            raise TypeError("nx must be an integer")
+            raise TypeError('nx must be an integer')
         if nx < 1:
-            raise ValueError("nx must be a positive integer")
-        if type(layers) is not list or len(layers) < 1:
-            raise TypeError("layers must be a list of positive integers")
-        for layer in layers:
-            if type(layer) is not int or layer < 1:
-                raise TypeError("layers must be a list of positive integers")
+            raise ValueError('nx must be a positive integer')
+        if type(layers) is not list or not layers:
+            raise TypeError('layers must be a list of positive integers')
 
         self.L = len(layers)
         self.cache = {}
-        self.weights = {"W1": np.random.randn(layers[0], nx) *
-                        np.sqrt(2 / nx),
-                        "b1": np.zeros((layers[0], 1))}
-        for layer, size in enumerate(layers[1:], 2):
-            cur = "W" + str(layer)
-            self.weights[cur] = (np.random.randn(size, layers[layer - 2]) *
-                                 np.sqrt(2 / layers[layer - 2]))
-            cur = "b" + str(layer)
-            self.weights[cur] = np.zeros((layers[layer - 1], 1))
+        self.weights = {}
+
+        for x in range(self.L):
+            if type(layers[x]) is not int or layers[x] <= 0:
+                raise TypeError('layers must be a list of positive integers')
+
+            wx = 'W'+str(x + 1)
+            bx = 'b'+str(x + 1)
+            if x == 0:
+                self.weights[wx] = np.random.randn(layers[x], nx)\
+                                   * np.sqrt(2./nx)
+            else:
+                self.weights[wx] = np.random.randn(layers[x], layers[x-1])\
+                                   * np.sqrt(2/layers[x-1])
+            self.weights[bx] = np.zeros((layers[x], 1))
