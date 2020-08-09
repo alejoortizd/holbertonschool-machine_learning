@@ -77,6 +77,6 @@ class NeuralNetwork:
         err = A2 - Y
         opt = np.dot(self.__W2.T, err) * A1 * (1 - A1)
         self.__W2 -= alpha * np.dot(err, A1.T) / A1.shape[1]
-        self.__b2 -= alpha * err.mean(axis=1)
+        self.__b2 -= alpha * err.mean(axis=1, keepdims=True)
         self.__W1 -= alpha * np.dot(opt, X.T) / X.shape[1]
-        self.__b1 -= alpha * opt.mean(axis=1)
+        self.__b1 -= alpha * opt.mean(axis=1, keepdims=True)
