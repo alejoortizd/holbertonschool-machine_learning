@@ -1,0 +1,6 @@
+__pycache__
+*main*
+*Binary*
+*MNIST*
+/data
+.pkl
