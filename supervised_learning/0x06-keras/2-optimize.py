@@ -1,4 +1,3 @@
-  
 #!/usr/bin/env python3
 """Sets up Adam optimization for a keras model with
 categorical crossentropy loss and accuracy metrics"""
