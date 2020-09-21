@@ -1,4 +1,3 @@
-  
 #!/usr/bin/env python3
 """Calculates the weighted moving average of a data set"""
 import numpy as np

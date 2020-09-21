@@ -1,4 +1,3 @@
-  
 #!/usr/bin/env python3
 """Updates a variable in place using
 the Adam optimization algorithm"""
