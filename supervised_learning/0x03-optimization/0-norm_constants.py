@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """normalization constants function"""
-
 import numpy as np
 
 
